@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/start_tests.dir/tests/test.cpp.o -o start_tests  liblab_lib.a lib/libgtest_main.a lib/libgtest.a 
