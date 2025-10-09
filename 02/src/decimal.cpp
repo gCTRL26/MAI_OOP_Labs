@@ -82,10 +82,7 @@ namespace decimal {
         for (size_t i = 0; i < other1.arr_.Size(); ++i) {
             int a = other1.arr_.Get(i);
             int b = (i < other2.arr_.Size()) ? other2.arr_.Get(i) : 0;
-            
-            // Вычитаем с учетом предыдущего заема
             a -= borrow;
-            
             if (a < b) {
                 res.arr_.Get(i) = a + 10 - b;
                 borrow = 1;
