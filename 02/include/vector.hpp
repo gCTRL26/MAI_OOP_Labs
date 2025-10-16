@@ -2,8 +2,8 @@
 
 #include <algorithm>
 #include <cstddef>
-#include <cstdint>
-#include <memory>
+
+// signature for vector
 
 namespace vector {
     class Vector {

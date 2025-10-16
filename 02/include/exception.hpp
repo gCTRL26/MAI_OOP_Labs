@@ -3,6 +3,8 @@
 #include <exception>
 #include <string>
 
+// my own exceptions
+
 namespace exception {
     class NaNException: std::exception {
     public:

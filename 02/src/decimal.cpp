@@ -1,6 +1,8 @@
 #include "../include/decimal.hpp"
 #include "../include/exception.hpp"
 
+// my own realization of decimal on homemade vector
+
 namespace decimal {
 
     Decimal::Decimal(): arr_(vector::Vector(1, 0)) {}

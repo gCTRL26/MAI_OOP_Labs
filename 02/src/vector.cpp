@@ -1,5 +1,7 @@
 #include "../include/vector.hpp"
 
+// vector realization
+
 namespace vector {
     const int START_CAP = 10;
 
