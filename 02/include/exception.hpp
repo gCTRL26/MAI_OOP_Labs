@@ -1,34 +1,18 @@
 #pragma once
 
-#include <exception>
+#include <stdexcept>
 #include <string>
 
 // my own exceptions
 
 namespace exception {
-    class NaNException: std::exception {
+    class NaNException: public std::runtime_error {
     public:
-        explicit NaNException(const std::string& text):
-            error_message_(text){}
-
-        const char* what() const noexcept override {
-            return error_message_.data();
-        }
-
-    private:
-        std::string_view error_message_;
+        explicit NaNException(const std::string& text): std::runtime_error(text) {}
     };
 
-    class NegativeException: std::exception {
+    class NegativeException: public std::runtime_error {
     public:
-        explicit NegativeException(const std::string& text):
-            error_message_(text){}
-
-        const char* what() const noexcept override {
-            return error_message_.data();
-        }
-
-    private:
-        std::string_view error_message_;
+        explicit NegativeException(const std::string& text): std::runtime_error(text) {}
     };
 }

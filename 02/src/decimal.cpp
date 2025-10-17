@@ -1,5 +1,5 @@
-#include "../include/decimal.hpp"
-#include "../include/exception.hpp"
+#include "decimal.hpp"
+#include "exception.hpp"
 
 // my own realization of decimal on homemade vector
 
