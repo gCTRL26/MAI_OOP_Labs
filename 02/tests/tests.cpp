@@ -2,6 +2,8 @@
 #include "decimal.hpp"
 #include "exception.hpp"
 
+//some tests
+
 using namespace decimal;
 
 class DecimalTest : public ::testing::Test {

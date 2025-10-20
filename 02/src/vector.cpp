@@ -1,7 +1,9 @@
-#include "../include/vector.hpp"
+#include <algorithm>
+#include "vector.hpp"
+
+// vector realization
 
 namespace vector {
-    const int START_CAP = 10;
 
     Vector::Vector() : arr_(nullptr), sz_(0), cap_(0) {
     }
@@ -15,7 +17,7 @@ namespace vector {
     Vector::Vector(const Vector& other)
         : arr_(reinterpret_cast<unsigned char*>(new int8_t[other.cap_ * sizeof(unsigned char)])), sz_(other.sz_), cap_(other.cap_) {
         for (size_t i = 0; i != sz_; ++i) {
-            new (arr_ + i) unsigned char(std::move(other.arr_[i]));
+            new (arr_ + i) unsigned char(other.arr_[i]);
         }
     }
 
@@ -157,4 +159,10 @@ namespace vector {
     Vector::~Vector() {
         delete[] reinterpret_cast<int8_t*>(arr_);
     }
+
+    void Vector::Swap(Vector& other) {
+            std::swap(other.arr_, arr_);
+            std::swap(other.cap_, cap_);
+            std::swap(other.sz_, sz_);
+        }
 }

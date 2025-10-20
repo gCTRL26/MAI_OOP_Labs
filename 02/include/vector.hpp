@@ -1,9 +1,9 @@
 #pragma once
 
-#include <algorithm>
+#include <initializer_list>
 #include <cstddef>
-#include <cstdint>
-#include <memory>
+
+// signature for vector
 
 namespace vector {
     class Vector {
@@ -53,14 +53,11 @@ namespace vector {
         ~Vector();
 
     private:
+        static const int START_CAP = 10;
         unsigned char* arr_;
         size_t sz_;
         size_t cap_;
 
-        void Swap(Vector& other) {
-            std::swap(other.arr_, arr_);
-            std::swap(other.cap_, cap_);
-            std::swap(other.sz_, sz_);
-        }
+        void Swap(Vector& other);
     };
 }

@@ -1,12 +1,11 @@
 #pragma once
 
 #include "vector.hpp"
-#include <algorithm>
 #include <cstddef>
-#include <cstdint>
 #include <initializer_list>
 #include <string>
-#include <utility>
+
+// signature for decimal
 
 namespace decimal {
     class Decimal {
