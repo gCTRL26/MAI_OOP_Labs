@@ -1,1 +1,0 @@
-/usr/local/bin/c++  -Werror=maybe-uninitialized -fsanitize=leak  -fsanitize=leak CMakeFiles/main.dir/main.cpp.o -o main  libfigures_lib.a 
