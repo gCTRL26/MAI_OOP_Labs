@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfigures_lib.a CMakeFiles/figures_lib.dir/src/figure.cpp.o CMakeFiles/figures_lib.dir/src/rectangle.cpp.o CMakeFiles/figures_lib.dir/src/diamond.cpp.o CMakeFiles/figures_lib.dir/src/trapezoid.cpp.o CMakeFiles/figures_lib.dir/src/vector.cpp.o
+/usr/bin/ranlib libfigures_lib.a

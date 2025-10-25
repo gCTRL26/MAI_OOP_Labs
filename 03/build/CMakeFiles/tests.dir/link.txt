@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized -fsanitize=leak  -fsanitize=leak CMakeFiles/tests.dir/tests/tests.cpp.o -o tests  libfigures_lib.a lib/libgtest_main.a lib/libgtest.a 

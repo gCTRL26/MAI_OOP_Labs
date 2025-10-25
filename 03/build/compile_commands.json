@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/figures_lib.dir/src/figure.cpp.o -c /workspaces/MAI_OOP_Labs/03/src/figure.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/src/figure.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/figures_lib.dir/src/rectangle.cpp.o -c /workspaces/MAI_OOP_Labs/03/src/rectangle.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/src/rectangle.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/figures_lib.dir/src/diamond.cpp.o -c /workspaces/MAI_OOP_Labs/03/src/diamond.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/src/diamond.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/figures_lib.dir/src/trapezoid.cpp.o -c /workspaces/MAI_OOP_Labs/03/src/trapezoid.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/src/trapezoid.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/figures_lib.dir/src/vector.cpp.o -c /workspaces/MAI_OOP_Labs/03/src/vector.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/src/vector.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/main.dir/main.cpp.o -c /workspaces/MAI_OOP_Labs/03/main.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/main.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/include -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/include -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest  -Werror=maybe-uninitialized -fsanitize=leak -std=gnu++20 -o CMakeFiles/tests.dir/tests/tests.cpp.o -c /workspaces/MAI_OOP_Labs/03/tests/tests.cpp",
+  "file": "/workspaces/MAI_OOP_Labs/03/tests/tests.cpp"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-build/googlemock",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock/include -I/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/include -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest  -Werror=maybe-uninitialized -fsanitize=leak -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-build/googlemock",
+  "command": "/usr/local/bin/c++  -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock/include -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/include -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest  -Werror=maybe-uninitialized -fsanitize=leak -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-build/googletest",
+  "command": "/usr/local/bin/c++  -I/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/include -I/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest  -Werror=maybe-uninitialized -fsanitize=leak -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-build/googletest",
+  "command": "/usr/local/bin/c++  -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/include -isystem /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest  -Werror=maybe-uninitialized -fsanitize=leak -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/workspaces/MAI_OOP_Labs/03/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+}
+]
