@@ -1,8 +1,9 @@
-#include <cmath>
-#include <cstddef>
-
 #include "rectangle.hpp"
 #include "exception.hpp"
+#include "figure.hpp"
+
+#include <cmath>
+#include <cstddef>
 
 namespace figure {
     Rectangle::Rectangle(): Rectangle(Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0)) {}
@@ -10,17 +11,19 @@ namespace figure {
         if (!Validate(p1, p2, p3, p4)) {
             throw exceptions::InvalidPointsException("Rectangle: Wrong points");
         }
-        points_ = new Point[ANGLES] {p1, p2, p3, p4};
+        points_ = new Point[RECTANGLEANGLES] {p1, p2, p3, p4};
     }
     Rectangle::Rectangle(const Rectangle& other) {
-        points_ = new Point[ANGLES];
-        for (size_t i = 0; i != ANGLES; ++i) {
+        points_ = new Point[RECTANGLEANGLES];
+        for (size_t i = 0; i != RECTANGLEANGLES; ++i) {
             points_[i] = Point(other.points_[i].x, other.points_[i].y);
         }
     }
     Rectangle& Rectangle::operator=(const Rectangle& other) {
-        if (this == &other) return *this;
-        for (size_t i = 0; i != ANGLES; ++i) {
+        if (this == &other) {
+            return *this;
+        }
+        for (size_t i = 0; i != RECTANGLEANGLES; ++i) {
             points_[i] = other.points_[i];
         }
         return *this;
@@ -36,12 +39,12 @@ namespace figure {
         return Area();
     }
     Rectangle::~Rectangle() {
-        delete [] points_;
+        delete[] points_;
     }
     bool Rectangle::Validate(Point p1, Point p2, Point p3, Point p4) const {
-        Point points_arr[ANGLES] = {p1, p2, p3, p4};
-        for (size_t i = 0; i != ANGLES; ++i) {
-            for (size_t j = i + 1; j != ANGLES; ++j) {
+        Point points_arr[RECTANGLEANGLES] = {p1, p2, p3, p4};
+        for (size_t i = 0; i != RECTANGLEANGLES; ++i) {
+            for (size_t j = i + 1; j != RECTANGLEANGLES; ++j) {
                 if (points_arr[i] == points_arr[j]) {
                     return false;
                 }
@@ -72,15 +75,15 @@ namespace figure {
     }
     std::ostream& operator<<(std::ostream& os, const Rectangle& r) {
         os << "[";
-        for (size_t i = 0; i != ANGLES; ++i) {
-            os << "(" << r.points_[i].x << ", " << r.points_[i].y << ")";
+        for (size_t i = 0; i != RECTANGLEANGLES; ++i) {
+            os << r.points_[i];
         }
         os << "]" << std::endl;
         return os;
     }
     std::istream& operator>>(std::istream& is, Rectangle& r) {
-        Point input_points[ANGLES];
-        for (size_t i = 0; i != ANGLES; ++i) {
+        Point input_points[RECTANGLEANGLES];
+        for (size_t i = 0; i != RECTANGLEANGLES; ++i) {
             is >> input_points[i];
         }
         try {

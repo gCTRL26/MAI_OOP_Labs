@@ -1,66 +1,66 @@
 #pragma once
 
+#include "figure.hpp"
+
 #include <cstdlib>
 #include <initializer_list>
 
-#include "figure.hpp"
-
 namespace vector {
-    class Vector {
-      friend void swap(Vector& v1, Vector& v2) noexcept;
-      public:
-        Vector();
+class Vector {
+    friend void swap(Vector& v1, Vector& v2) noexcept;
+    public:
+    Vector();
 
-        Vector(const Vector& other);
+    Vector(const Vector& other);
 
-        Vector(Vector&& other) noexcept;
+    Vector(Vector&& other) noexcept;
 
-        Vector(std::initializer_list<figure::Figure*> init);
+    Vector(std::initializer_list<figure::Figure*> init);
 
-        figure::Figure& operator[](size_t pos);
+    figure::Figure& operator[](size_t pos);
 
-        const figure::Figure& operator[](size_t pos) const;
+    const figure::Figure& operator[](size_t pos) const;
 
-        Vector& operator=(const Vector& other);
+    Vector& operator=(const Vector& other);
 
-        Vector& operator=(Vector&& other) noexcept;
+    Vector& operator=(Vector&& other) noexcept;
 
-        figure::Figure& Front() const noexcept;
+    figure::Figure& Front() const;
 
-        figure::Figure& Back() const noexcept;
+    figure::Figure& Back() const;
 
-        figure::Figure** Data() const noexcept;
+    figure::Figure** Data() const noexcept;
 
-        bool IsEmpty() const noexcept;
+    bool IsEmpty() const noexcept;
 
-        size_t Size() const noexcept;
+    size_t Size() const noexcept;
 
-        size_t Capacity() const noexcept;
+    size_t Capacity() const noexcept;
 
-        void Reserve(size_t new_cap);
+    void Reserve(size_t new_cap);
 
-        void Clear() noexcept;
+    void Clear() noexcept;
 
-        void Insert(size_t pos, figure::Figure* value);
+    void Insert(size_t pos, figure::Figure* value);
 
-        void Erase(size_t begin_pos, size_t end_pos);
+    void Erase(size_t begin_pos, size_t end_pos);
 
-        void PushBack(figure::Figure* value);
+    void PushBack(figure::Figure* value);
 
-        void PopBack();
+    void PopBack();
 
-        double TotalArea();
+    double TotalArea();
 
-        void SeparateCenter();
+    void SeparateCenter();
 
-        void SeparateArea();
+    void SeparateArea();
 
-        ~Vector();
+    ~Vector();
 
-    private:
-        size_t sz_;
-        size_t cap_;
-        figure::Figure** arr_;
-        void Swap(Vector& other) noexcept;
-    };
+private:
+    size_t sz_;
+    size_t cap_;
+    figure::Figure** arr_;
+    void Swap(Vector& other) noexcept;
+};
 }
