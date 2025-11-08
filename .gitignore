@@ -39,5 +39,6 @@
 
 # debug information files
 *.dwo
-/01/.cache
-/01/build
+.cache
+build
+.vscode
