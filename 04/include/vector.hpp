@@ -44,6 +44,11 @@ private:
     size_t sz_;
     size_t cap_;
     std::shared_ptr<T[]> arr_;
+    inline static void Deleter(T* ptr) {
+        if (ptr) {
+            delete[] ptr;
+        }
+    }
     void Swap(Vector& other) noexcept;
 };
 }

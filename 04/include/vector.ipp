@@ -11,20 +11,20 @@
 namespace vector {
 
 template<class T>
-Vector<T>::Vector() : sz_(0), cap_(0), arr_(nullptr) {}
+Vector<T>::Vector() : sz_(0), cap_(0), arr_(nullptr, Deleter) {}
 
 template<class T>
-Vector<T>::Vector(size_t n) : sz_(n), cap_(n), arr_(std::make_shared<T[]>(cap_)) {}
+Vector<T>::Vector(size_t n) : sz_(n), cap_(n), arr_(new T[cap_], Deleter) {}
 
 template<class T>
-Vector<T>::Vector(size_t n, const T& val) : sz_(n), cap_(n), arr_(std::make_shared<T[]>(cap_)) {
+Vector<T>::Vector(size_t n, const T& val) : sz_(n), cap_(n), arr_(new T[cap_], Deleter) {
     for (size_t i = 0; i != sz_; ++i) {
         arr_[i] = val;
     }
 }
 
 template<class T>
-Vector<T>::Vector(const Vector& other) : sz_(other.sz_), cap_(other.cap_), arr_(std::make_shared<T[]>(cap_)) {
+Vector<T>::Vector(const Vector& other) : sz_(other.sz_), cap_(other.cap_), arr_(new T[cap_], Deleter) {
     std::copy(other.arr_.get(), other.arr_.get() + sz_, arr_.get());
 }
 
@@ -115,7 +115,7 @@ void Vector<T>::Reserve(size_t new_cap) {
     if (new_cap <= cap_) {
         return;
     }
-    std::shared_ptr<T[]> new_arr = std::make_shared<T[]>(new_cap);
+    std::shared_ptr<T[]> new_arr(new T[new_cap], Deleter);
 
     for (size_t i = 0; i != sz_; ++i) {
         new_arr[i] = std::move(arr_[i]);
@@ -186,7 +186,7 @@ template<class U>
 U Vector<T>::TotalArea() {
     U res = 0.0;
     for (size_t i = 0; i != sz_; ++i) {
-        res += arr_[i]->Area();
+        res += static_cast<U>(*arr_[i]);
     }
     return res;
 }
